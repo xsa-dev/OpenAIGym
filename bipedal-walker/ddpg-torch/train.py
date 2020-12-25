@@ -4,7 +4,10 @@ import numpy as np
 from ddpg_agent import Agent
 import matplotlib.pyplot as plt
 
-env = gym.make('BipedalWalkerHardcore-v2')
+import os
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
+
+env = gym.make('BipedalWalker-v2')
 
 state_dim = env.observation_space.shape[0]
 action_dim = env.action_space.shape[0]
